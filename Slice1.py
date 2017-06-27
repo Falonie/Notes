@@ -1,0 +1,7 @@
+l=list(range(100))
+m=tuple(range(100))
+a=('ABCDEFG')
+print(l[1:10:2],m[-20::3])
+print(l[::2])
+print(m[-20::3])
+print(a[2:4])

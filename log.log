@@ -1,0 +1,9 @@
+Sat 13 May 2017 22:43:30 WARNING logger.py 21 11196 warn message
+Sat 13 May 2017 22:43:30 ERROR logger.py 22 11196 error message
+Sat 13 May 2017 22:43:30 CRITICAL logger.py 23 11196 critical message
+Sat 13 May 2017 23:00:45 WARNING logger.py 21 14964 warn message
+Sat 13 May 2017 23:00:45 ERROR logger.py 22 14964 error message
+Sat 13 May 2017 23:00:45 CRITICAL logger.py 23 14964 critical message
+Sun 14 May 2017 21:59:52 WARNING logger.py 21 4176 warn message
+Sun 14 May 2017 21:59:52 ERROR logger.py 22 4176 error message
+Sun 14 May 2017 21:59:52 CRITICAL logger.py 23 4176 critical message
