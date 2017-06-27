@@ -1,9 +1,11 @@
 from collections import namedtuple
+from random import choice
 
-Card=namedtuple('Card',['rank','suit'])
-a=Card(rank='a',suit='1')
-b=Card('b',4)
-print(a,b)
+Card = namedtuple('Card', ['rank', 'suit'])
+a = Card(rank='a', suit='1')
+b = Card('b', 4)
+print(a, b)
+
 
 class FrenchDeck():
     ranks = [str(n) for n in range(2, 11)] + list('JQKA')
@@ -15,6 +17,16 @@ class FrenchDeck():
     def __len__(self):
         return len(self.cards)
 
-deck=FrenchDeck()
+    # def __getitem__(self, position):
+    #     return self.cards[position]
+
+
+deck = FrenchDeck()
 print(len(deck))
 print(deck.cards)
+# print(deck[1])
+
+# for i,c in enumerate(deck.cards,1):
+#     print(i,c)
+
+print(choice(deck.cards))
