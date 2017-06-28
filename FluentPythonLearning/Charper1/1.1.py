@@ -12,21 +12,32 @@ class FrenchDeck():
     suits = 'spades diamonds clubs hearts'.split()
 
     def __init__(self):
-        self.cards = [Card(rank, suit) for suit in self.suits for rank in self.ranks]
+        self._cards = [Card(rank, suit) for suit in self.suits for rank in self.ranks]
 
     def __len__(self):
-        return len(self.cards)
+        return len(self._cards)
 
-    # def __getitem__(self, position):
-    #     return self.cards[position]
+    def __getitem__(self, position):
+        return self._cards[position]
 
 
 deck = FrenchDeck()
 print(len(deck))
-print(deck.cards)
-# print(deck[1])
+print(deck)
+print(deck[2])
+# print(deck.cards[1])
+print(deck[-5:])
 
 # for i,c in enumerate(deck.cards,1):
 #     print(i,c)
 
-print(choice(deck.cards))
+print(choice(deck))
+
+# for i, d in enumerate(reversed(deck), 1):
+#     print(i, d)
+
+print('\n')
+# print([i for i in reversed(deck)])
+
+for i in deck[::]:
+    print(i)
