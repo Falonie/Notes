@@ -1,8 +1,8 @@
-import random,time,queue
+import random,time,queue_exercise
 from multiprocessing.managers import BaseManager
 
-task_queue=queue.Queue()
-result_queue=queue.Queue()
+task_queue=queue_exercise.Queue()
+result_queue=queue_exercise.Queue()
 
 class QueueManager(BaseManager):
     pass

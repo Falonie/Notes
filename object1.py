@@ -24,7 +24,7 @@ class Student(object):
         return reversed(self.name)
 
     def __repr__(self):
-        return '{},{}'.format(self.name, self.score)
+        return '{}\'score is {}.'.format(self.name, self.score)
 
     def __getattr__(self, item):
         return self.name
@@ -39,7 +39,7 @@ class Student(object):
         return 'excellent' if self.score > 90 else 'bad'
 			
 n=Student('Caseny','male',95)
-n.name='Caseny Wang'
+n.name='Falonie'
 m=Student('Aven','female',90)
 
 print(n.get())

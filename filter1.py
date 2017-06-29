@@ -1,5 +1,5 @@
 def fun(n):
-    return n%3==0
+    return n % 3 == 0
 print(list(filter(lambda x:x%3==0,[1,3,6,7,5,15])))
 
 def is_palindrome(n):
