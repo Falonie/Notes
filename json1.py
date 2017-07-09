@@ -1,4 +1,4 @@
-import json,random
+import json,random,sys
 
 d=dict(name='caren',salary=18000)
 print(json.dumps(d),type(d))
@@ -31,7 +31,7 @@ def main():
             for line in lines:
                 print(line, type(line), line['ip'])
                 p.append(line['ip'])
-            print(p)
+            # print(p)
             return p
 
 if __name__=='__main__':
@@ -39,17 +39,23 @@ if __name__=='__main__':
     # print(random.choice(main()),type(random.choice(main())))
     print(random.choice(main()))
 
+print('\n')
+
 def readip():
     pool = []
+    pool2 = []
     with open('ip.txt','r') as f:
         for i in f.readlines():
             lines = json.loads(i)
             line = lines['RESULT']
             for l in line:
-                print(l, l.get('ip'), type(l))
+                ip = ':'.join((l.get('ip'), l.get('port')))
+                print(l, type(l), l.get('ip'), l.get('port'))
                 pool.append(l.get('ip'))
-            return pool
+                pool2.append(ip)
+            return pool2
 
 if __name__=='__main__':
-    readip()
-    print(random.choice(readip()))
+    # readip()
+    print(readip())
+    print(random.choice(readip()),type(random.choice(readip())))

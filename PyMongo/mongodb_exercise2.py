@@ -52,4 +52,4 @@ print('\n','Indexing')
 result=db.profiles.create_index([('user_id',ASCENDING)],unique=True)
 print(sorted(list(db.profiles.index_information())))
 
-#db.posts.remove()
+db.profiles.remove()
