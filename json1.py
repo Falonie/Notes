@@ -44,13 +44,13 @@ print('\n')
 def readip():
     pool = []
     pool2 = []
-    with open('ip.txt','r') as f:
+    with open('ip3.txt','r') as f:
         for i in f.readlines():
             lines = json.loads(i)
             line = lines['RESULT']
             for l in line:
                 ip = ':'.join((l.get('ip'), l.get('port')))
-                print(l, type(l), l.get('ip'), l.get('port'))
+                # print(l, type(l), l.get('ip'), l.get('port'))
                 pool.append(l.get('ip'))
                 pool2.append(ip)
             return pool2
@@ -59,3 +59,28 @@ if __name__=='__main__':
     # readip()
     print(readip())
     print(random.choice(readip()),type(random.choice(readip())))
+
+print('\n')
+
+pool3=[]
+
+# class MiddleWares(object):
+    # @classmethod
+with open('ip3.txt', 'r') as f:
+    for i in f.readlines():
+        lines = json.loads(i)
+        line = lines['RESULT']
+        for l in line:
+            ip = ':'.join((l.get('ip'), l.get('port')))
+            # print(l, type(l), l.get('ip'), l.get('port'))
+            # pool.append(l.get('ip'))
+            pool3.append(ip)
+print(random.choice(pool3))
+
+print('\n')
+with open('E:\ip6.txt','r') as f:
+    # for line in f.readlines():
+    #     print(line.strip())
+    lines = ['http://' + l.strip() for l in f.readlines()]
+    print(lines)
+print(random.choice(lines))

@@ -1,6 +1,6 @@
 import json
 
-d=dict(name='Caseny',salary=18000)
+d=dict(name='Falonie',salary=18000)
 a=json.dumps(d)
 print(a,type(d),type(a))
 
