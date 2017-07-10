@@ -1,4 +1,6 @@
-import json
+import json,sys
+from imp import reload
+reload(sys)
 
 d=dict(name='Caseny',salary=18000)
 a=json.dumps(d)
