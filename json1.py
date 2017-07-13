@@ -78,7 +78,7 @@ with open('ip3.txt', 'r') as f:
 print(random.choice(pool3))
 
 print('\n')
-with open('E:\ip6.txt','r') as f:
+with open('ip6.txt','r') as f:
     # for line in f.readlines():
     #     print(line.strip())
     lines = ['http://' + l.strip() for l in f.readlines()]
