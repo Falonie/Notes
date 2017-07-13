@@ -9,7 +9,7 @@ with sqlite3.connect('test.db') as conn:
     #for eachUser in cursor.fetchall():
     #    print(eachUser)
     cursor.execute('SELECT * FROM user')
-    values=cursor.fetchall()
+    values = cursor.fetchall()
     print(values)
     #cursor.execute('DROP TABLE user')
     cursor.close()

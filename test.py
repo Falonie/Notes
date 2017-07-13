@@ -1,13 +1,13 @@
 from datetime import datetime
 
 class Mobile(object):
-	def __init__(self,name):
-		self.name=name
+	def __init__(self, name):
+		self.name = name
 a=Mobile('apple')
 print(a.name)
 
 class Mobile_2(object):
-	name='Huawei'
+	name = 'Huawei'
 print(Mobile_2.name)
 
 a=list('abcde')

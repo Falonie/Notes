@@ -9,7 +9,7 @@ s.send(b'GET / HTTP/1.1\r\nHost: www.zhihu.com\r\nConnection: close\r\n\r\n')
 #receive data
 buffer=[]
 while True:
-    d=s.recv(1024)
+    d = s.recv(1024)
     if d:
         buffer.append(d)
     else:

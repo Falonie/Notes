@@ -1,5 +1,6 @@
 class Employee(object):
-    __slots__=('name','salary')
+    __slots__ = ('name', 'salary')
+
 n=Employee()
 n.name='Caren'
 n.salary=18000
