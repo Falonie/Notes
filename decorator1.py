@@ -9,8 +9,8 @@ f()
 print(f.__name__,'\n')
 
 def log(func):
-    def wrapper(*args,**kwargs):
-        print('call %s()'%func.__name__)
+    def wrapper(*args, **kwargs):
+        print('call %s()' % func.__name__)
         return func(*args,**kwargs)
     return wrapper
 @log
@@ -23,9 +23,9 @@ print(now.__name__,'\n')
 
 def log(text):
     def decorator(func):
-        def wrapper(*args,**kwargs):
-            print('%s %s():'%(text,func.__name__))
-            return func(*args,**kwargs)
+        def wrapper(*args, **kwargs):
+            print('%s %s():' % (text, func.__name__))
+            return func(*args, **kwargs)
         return wrapper
     return decorator
 # def now():
@@ -109,8 +109,8 @@ print(s.resolution,'\n')
 
 def fun(func):
     @functools.wraps(func)
-    def wrapper(*args,**kwargs):
-        return func(*args,**kwargs)
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs)
     return wrapper
 @fun
 def bar(a):

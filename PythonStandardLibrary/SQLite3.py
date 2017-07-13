@@ -2,21 +2,20 @@ import sqlite3
 
 # con=sqlite3.connect('test1.db')
 # c=con.cursor()
-connection=sqlite3.connect('test1.db')
+connection = sqlite3.connect('test1.db')
 
 with sqlite3.connect('test1.db') as con:
-    c=con.cursor()
+    c = con.cursor()
     #c.execute('drop table book')
     #c.execute('create table book(id INT PRIMARY KEY ,sort INT ,name text,price REAL ,category INT ,FOREIGN KEY (category) REFERENCES category(id))')
 
-    books=[(1,1,'Python Cookbook',3.1,1),
-           (2,3,'Introducing Python',17,2),
-           (3,2,'R in Action',12,2)]
+    books = [(1, 1, 'Python Cookbook', 3.1, 1), (2, 3, 'Introducing Python', 17, 2), (3, 2, 'R in Action', 12, 2)]
     #c.executemany('insert into book VALUES (?,?,?,?,?)',books)
-    for value in c.execute('select * from book'):
+    for value in c.execute('SELECT * FROM book'):
         print(value)
-    # values=c.fetchall()
-    # for value in values:
+
+    # c.execute('SELECT * FROM book')
+    # for value in c.fetchall():
     #     print(value)
 
 #1 create table

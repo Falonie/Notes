@@ -11,6 +11,7 @@ def number(num):
         right_num = int(str(num)[i:])
         product = left_num * right_num
         list.append(product)
+    # list = [l * r for l in left_num for r in right_num]
         #print(product)
     return max(list)
 

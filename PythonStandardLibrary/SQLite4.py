@@ -1,6 +1,6 @@
 import sqlite3
 
-connection=sqlite3.connect('test1.db')
+connection = sqlite3.connect('test1.db')
 
 # try:
 # with sqlite3.connect('test1.db').cursor() as cursor:
@@ -9,8 +9,7 @@ connection=sqlite3.connect('test1.db')
 #     connection.commit()
 
 with sqlite3.connect('test1.db') as conn:
-    c=conn.cursor()
+    c = conn.cursor()
     for row in c.execute('select * from book'):
         print(row)
     conn.commit()
-

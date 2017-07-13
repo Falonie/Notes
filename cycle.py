@@ -1,3 +1,3 @@
-l=('Bart','Lisa','Adam')
+l = ('Bart','Lisa','Adam')
 for name in l:
-    print('Hello,%s!'%name)
+    print('Hello,%s!' % name)

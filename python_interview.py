@@ -18,11 +18,11 @@ import functools
 
 def decrator(func):
     @functools.wraps(func)
-    def wrapper(*args,**kwargs):
-        result=func(*args,**kwargs)
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
         return '{}:{}'.format(wrapper.__name__, result)
     return wrapper
 @decrator
 def func(x,y):
-    return x*y
+    return x * y
 print(func(2,3))
