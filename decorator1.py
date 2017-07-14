@@ -17,9 +17,8 @@ def log(func):
 def now():
     print(datetime.now())
 now()
+# log(now)()
 print(now.__name__,'\n')
-# now=log(now)
-# now()
 
 def log(text):
     def decorator(func):
@@ -69,9 +68,9 @@ def log(text):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
             print('{0} begin call {1}()'.format(text, func.__name__))
-            func(*args, **kwargs)
+            result = func(*args, **kwargs)
             print('{0} end call {1}()'.format(text, func.__name__))
-#            return result
+            return result
         return wrapper
     return decorator
 @log('execute')

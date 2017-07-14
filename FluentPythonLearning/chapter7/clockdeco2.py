@@ -40,6 +40,7 @@ if __name__ == '__main__':
     snooze(.123)
     print('*' * 40, 'Calling function()')
     function(3, 10)
+    clock(function(3, 10))
     print('*' * 40, 'Calling factorial()')
     factorial(5)
     print('*' * 40, 'Calling function2()')

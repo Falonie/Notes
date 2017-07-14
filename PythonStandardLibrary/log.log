@@ -7,3 +7,6 @@ Sat 13 May 2017 23:00:45 CRITICAL logger.py 23 14964 critical message
 Sun 14 May 2017 21:59:52 WARNING logger.py 21 4176 warn message
 Sun 14 May 2017 21:59:52 ERROR logger.py 22 4176 error message
 Sun 14 May 2017 21:59:52 CRITICAL logger.py 23 4176 critical message
+Fri 14 Jul 2017 17:54:06 WARNING logger.py 23 11148 warn message
+Fri 14 Jul 2017 17:54:06 ERROR logger.py 24 11148 error message
+Fri 14 Jul 2017 17:54:06 CRITICAL logger.py 25 11148 critical message
