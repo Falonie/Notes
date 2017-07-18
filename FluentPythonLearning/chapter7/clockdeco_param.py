@@ -19,8 +19,13 @@ def clock(fmt=DEFAULT_FMT):
 
 if __name__ == '__main__':
     @clock()
-    def snooze(seconds):
+    def snooze(seconds, x, y):
         time.sleep(seconds)
+        return seconds + x, y
 
     for i in range(3):
-        snooze(.123)
+        snooze(.123, 10, 'Falonie')
+        # print(snooze(.123, 10, 'Falonie'))
+
+# print(repr('22'),'22',True)
+# print(','.join(repr(i) for i in ['e',3]))

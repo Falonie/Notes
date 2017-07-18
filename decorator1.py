@@ -1,5 +1,5 @@
 from datetime import datetime
-import functools
+import functools,logging
 #print(datetime.now())
 
 def now():
@@ -77,7 +77,7 @@ def log(text):
 def now(a,country='China'):
     print('Current time:{0},Country:{1}'.format(a, country))
 now(datetime.now())
-print(now.__name__)
+print(now.__name__,'\n')
 
 
 class Screen(object):
@@ -114,4 +114,20 @@ def fun(func):
 @fun
 def bar(a):
     return 'time is {}.'.format(datetime.now()), a
-print(bar('AAA'))
+print(bar('AAA'),'\n')
+
+def use_logging(level):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            if level == "warn":
+                logging.warn("%s is running" % func.__name__)
+            return func(*args)
+        return wrapper
+
+    return decorator
+
+@use_logging(level="warn")
+def foo(name='foo'):
+    print("i am %s" % name)
+
+foo()
