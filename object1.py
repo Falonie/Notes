@@ -37,19 +37,19 @@ class Student(object):
 
     def get_score(self):
         return 'excellent' if self.score > 90 else 'bad'
-			
-n=Student('Caseny','male',95)
-n.name='Falonie'
-m=Student('Aven','female',90)
 
-print(n.get())
-print(n)
-print(n)
-print(n.score+10)
-print(n.score-5)
-print(n.score>60)
-print(n.__dict__)
-print(n.get_score())
-print(n.name,n.gender)
-print(Student('Allen',gender=None,score=26))
-print(n.score<=m.score)
+if __name__ == '__main__':
+    n = Student('Caseny', 'male', 95)
+    n.name = 'Falonie'
+    m = Student('Johncy', 'female', 90)
+    print(n.get())
+    print(n)
+    print(n)
+    print(n.score + 10)
+    print(n.score - 5)
+    print(n.score > 60)
+    print(n.__dict__)
+    print(n.get_score())
+    print(n.name,n.gender)
+    print(Student('Allen', gender=None, score=26))
+    print(n.score<=m.score)

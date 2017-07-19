@@ -1,5 +1,4 @@
 class Student(object):
-
     def __init__(self, name, score):
         self.__name = name
         self.__score = score
@@ -9,17 +8,18 @@ class Student(object):
 
     def get1(self):
         return self.__name
-    
+
     def get2(self):
         return self.__score
 
     def set(self, score):
         self.__score = score
 
-n=Student('Kate',90)
-n.score=95
-print(n.func())
-print(n.get1())
-print(n.get2())
-print(n.score)
-#print(n.set())
+if __name__ == '__main__':
+    n = Student('Kate', 90)
+    n.score = 95
+    print(n.func())
+    print(n.get1())
+    print(n.get2())
+    print(n.score)
+    # print(n.set())

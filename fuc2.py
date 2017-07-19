@@ -7,7 +7,7 @@ print(my_str('323'))
 print(my_str(31))
 
 def a_abs(a):
-    return a if a>=0 else -a
+    return a if a >= 0 else -a
     # if a>=0:
     #     return a
     # else:
@@ -15,9 +15,9 @@ def a_abs(a):
 print(a_abs(-99))
 
 def m_abs(s):
-    if not isinstance(s,(int,float)):
+    if not isinstance(s, (int, float)):
         raise TypeError('error,please enter again')
-    elif s>=0:
+    elif s >= 0:
         return s
     else:
         return -s

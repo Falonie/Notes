@@ -14,6 +14,7 @@ class Point(object):
     def obj2():
         return 'static'
 
-p=Point(2,3)
-print(p.get())
-print(Point.obj(2,3))
+if __name__ == '__main__':
+    p = Point(2, 3)
+    print(p.get())
+    print(Point.obj(2, 3))

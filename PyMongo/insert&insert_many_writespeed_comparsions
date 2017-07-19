@@ -1,0 +1,10 @@
+mongodb_writespeed_comparsion.py process_insertone 2017-07-19 16:05:43,425 root 3.8582205772399902
+mongodb_writespeed_comparsion.py process_insertmany 2017-07-19 16:07:12,064 root 0.4390249252319336
+mongodb_writespeed_comparsion.py process_insertone 2017-07-19 16:08:16,768 root 17.346992254257202
+mongodb_writespeed_comparsion.py process_insertmany 2017-07-19 16:10:47,180 root 1.5150866508483887
+mongodb_writespeed_comparsion.py process_insertone 2017-07-19 16:14:16,629 root 17.450998306274414
+mongodb_writespeed_comparsion.py process_insertmany 2017-07-19 16:16:21,203 root 2.3521342277526855
+mongodb_writespeed_comparsion.py process_insertone 2017-07-19 16:28:47,071 root 15.826905250549316
+mongodb_writespeed_comparsion.py process_insertmany 2017-07-19 16:30:49,111 root 1.3760786056518555
+mongodb_insertone&insertmany_writespeed_comparision.py process_insertone 2017-07-19 18:53:40,309 root 18.3150475025177
+mongodb_insertone&insertmany_writespeed_comparision.py process_insertmany 2017-07-19 18:54:41,225 root 1.323075532913208
