@@ -14,7 +14,6 @@ class MongoDB_insertone(MongoDB):
 
     def process_insertone(self):
         # fomatter = '%(filename)s %(funcname)s %(asctime)s %(name)s %(message)s'
-        # logging.basicConfig(filename='insert&insert_many_writespeed_comparsions',format=fomatter,level=logging.DEBUG)
         logging.basicConfig(filename=self.filename, format=self.fomatter, level=logging.DEBUG)
         t0 = time.time()
         for i in range(50000):
