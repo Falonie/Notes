@@ -1,4 +1,4 @@
-import asyncio, threading
+import asyncio, threading, time
 
 
 # @asyncio.coroutine
@@ -9,11 +9,13 @@ import asyncio, threading
 
 async def hello():
     print('Hello world! {}'.format(threading.current_thread()))
-    r = await asyncio.sleep(1)
+    time.sleep(1)
+    # r = await asyncio.sleep(1)
     print('Hello again! {}'.format(threading.current_thread()))
 
+
 loop = asyncio.get_event_loop()
-tasks = [hello(),hello()]
+tasks = [hello(), hello(), hello()]
 loop.run_until_complete(asyncio.wait(tasks))
 loop.close()
 
