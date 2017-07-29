@@ -1,7 +1,7 @@
 import time,threading
 
-balance=0
-lock=threading.Lock()
+balance = 0
+lock = threading.Lock()
 
 def change_it(n):
 
@@ -17,10 +17,11 @@ def run_thread(n):
         finally:
             lock.release()
 
-t1=threading.Thread(target=run_thread,args=(5,))
-t2=threading.Thread(target=run_thread,args=(8,))
-t1.start()
-t2.start()
-t1.join()
-t2.join()
-print(balance)
+if __name__ == '__main__':
+    t1 = threading.Thread(target=run_thread, args=(5,))
+    t2 = threading.Thread(target=run_thread, args=(8,))
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+    print(balance)

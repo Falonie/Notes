@@ -50,6 +50,6 @@ if __name__ == '__main__':
     print(n.score > 60)
     print(n.__dict__)
     print(n.get_score())
-    print(n.name,n.gender)
+    print(n.name, n.gender)
     print(Student('Allen', gender=None, score=26))
-    print(n.score<=m.score)
+    print(n.score <= m.score)

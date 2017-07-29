@@ -1,5 +1,6 @@
 def fuc(x):
-    return x*x
+    return x * x
+
 print(tuple(map(fuc,[1,2,3])))
 print(list(map(lambda x:x**2,range(10))))
 print(tuple(map(str,[1,2,3])))
