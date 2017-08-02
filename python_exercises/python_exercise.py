@@ -12,7 +12,8 @@ def number(num):
         product = left_num * right_num
         list.append(product)
     # list = [l * r for l in left_num for r in right_num]
-        #print(product)
+    #     print(product)
+    # print([int(str(num)[:i]) * int(str(num)[i:]) for i in len(str(num))])
     return max(list)
 
 #number(2333)

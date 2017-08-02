@@ -1,4 +1,5 @@
-import pymongo,time,logging
+import pymongo, time, logging
+
 
 class MongoDB(object):
     def __init__(self):
@@ -7,6 +8,7 @@ class MongoDB(object):
         self.collection = self.db['MongoDB_writespeed_comparision']
         self.fomatter = '%(filename)s %(funcName)s %(asctime)s %(name)s %(message)s'
         self.filename = 'insert&insert_many_writespeed_comparsions'
+
 
 class MongoDB_insertone(MongoDB):
     def __init__(self):
@@ -25,6 +27,7 @@ class MongoDB_insertone(MongoDB):
     def select(self):
         for i in self.collection.find({}):
             print(i)
+
 
 class MongoDB_insertmany(MongoDB):
     def __init__(self):
@@ -45,6 +48,7 @@ class MongoDB_insertmany(MongoDB):
     def select(self):
         for i in self.collection.find({}):
             print(i)
+
 
 if __name__ == '__main__':
     mongo = MongoDB_insertone()
