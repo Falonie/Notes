@@ -1,6 +1,7 @@
 from tkinter import *
 import tkinter.messagebox as messagebox
 
+
 class Application(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master)
@@ -21,6 +22,7 @@ class Application(Frame):
         name = self.nameInput.get() or 'World'
         messagebox.showinfo('Message', 'Hello,%s' % name)
 
-app=Application()
+
+app = Application()
 app.master.title('Hello Python.')
 app.mainloop()

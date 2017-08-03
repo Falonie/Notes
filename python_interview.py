@@ -1,6 +1,7 @@
 import functools
 
-#16 单例模式
+
+# 16 单例模式
 
 # def SingleTon(cls,*args,**kwargs):
 #     instances = {}
@@ -23,6 +24,7 @@ def decrator(func):
         return '{}:{}'.format(wrapper.__name__, result)
     return wrapper
 @decrator
-def func(x,y):
+def func(x, y):
     return x * y
-print(func(2,3))
+
+print(func(2, 3))

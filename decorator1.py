@@ -1,32 +1,47 @@
 from datetime import datetime
-import functools,logging
-#print(datetime.now())
+import functools, logging
+
+
+# print(datetime.now())
 
 def now():
     print(datetime.now())
-f=now
+
+
+f = now
 f()
-print(f.__name__,'\n')
+print(f.__name__, '\n')
+
 
 def log(func):
     def wrapper(*args, **kwargs):
         print('call %s()' % func.__name__)
-        return func(*args,**kwargs)
+        return func(*args, **kwargs)
+
     return wrapper
+
+
 @log
 def now():
     print(datetime.now())
+
+
 now()
 # log(now)()
-print(now.__name__,'\n')
+print(now.__name__, '\n')
+
 
 def log(text):
     def decorator(func):
         def wrapper(*args, **kwargs):
             print('%s %s():' % (text, func.__name__))
             return func(*args, **kwargs)
+
         return wrapper
+
     return decorator
+
+
 # def now():
 #     print(datetime.now())
 # now=log('execute')(now)
@@ -34,20 +49,29 @@ def log(text):
 @log('execute')
 def now():
     print(datetime.now())
+
+
 now()
-print(now.__name__,'\n')
+print(now.__name__, '\n')
+
 
 def log(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         print('call %s()' % func.__name__)
         return func(*args, **kwargs)
+
     return wrapper
+
+
 @log
 def now():
     print(datetime.now())
+
+
 now()
-print(now.__name__,'\n')
+print(now.__name__, '\n')
+
 
 def log(text):
     def decorator(func):
@@ -55,13 +79,20 @@ def log(text):
         def wrapper(*args, **kwargs):
             print('%s %s()' % (text, func.__name__))
             return func(*args, **kwargs)
+
         return wrapper
+
     return decorator
+
+
 @log('execute')
 def now():
     print(datetime.now())
+
+
 now()
-print(now.__name__,'\n')
+print(now.__name__, '\n')
+
 
 def log(text):
     def decorator(func):
@@ -71,13 +102,19 @@ def log(text):
             result = func(*args, **kwargs)
             print('{0} end call {1}()'.format(text, func.__name__))
             return result
+
         return wrapper
+
     return decorator
+
+
 @log('execute')
-def now(a,country='China'):
+def now(a, country='China'):
     print('Current time:{0},Country:{1}'.format(a, country))
+
+
 now(datetime.now())
-print(now.__name__,'\n')
+print(now.__name__, '\n')
 
 
 class Screen(object):
@@ -101,20 +138,28 @@ class Screen(object):
     def resolution(self):
         return self._height * self._width
 
+
 s = Screen()
 s.width = 1024
 s.height = 768
-print(s.resolution,'\n')
+print(s.resolution, '\n')
+
 
 def fun(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         return func(*args, **kwargs)
+
     return wrapper
+
+
 @fun
 def bar(a):
     return 'time is {}.'.format(datetime.now()), a
-print(bar('AAA'),'\n')
+
+
+print(bar('AAA'), '\n')
+
 
 def use_logging(level):
     def decorator(func):
@@ -122,12 +167,15 @@ def use_logging(level):
             if level == "warn":
                 logging.warn("%s is running" % func.__name__)
             return func(*args)
+
         return wrapper
 
     return decorator
 
+
 @use_logging(level="warn")
 def foo(name='foo'):
     print("i am %s" % name)
+
 
 foo()

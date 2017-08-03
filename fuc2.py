@@ -3,8 +3,11 @@ def my_str(x):
         raise TypeError('error')
     else:
         return x
+
+
 print(my_str('323'))
 print(my_str(31))
+
 
 def a_abs(a):
     return a if a >= 0 else -a
@@ -12,7 +15,10 @@ def a_abs(a):
     #     return a
     # else:
     #     return -a
+
+
 print(a_abs(-99))
+
 
 def m_abs(s):
     if not isinstance(s, (int, float)):
@@ -21,4 +27,3 @@ def m_abs(s):
         return s
     else:
         return -s
-

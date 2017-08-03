@@ -1,9 +1,11 @@
-print(type('123'),type(123),type(True))
-print(isinstance(123,int))
+print(type('123'), type(123), type(True))
+print(isinstance(123, int))
+
 
 class Object(object):
     def __init__(self):
         self.name = 'caren'
+
 
 if __name__ == '__main__':
     n = Object()
