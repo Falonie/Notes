@@ -1,6 +1,5 @@
 class Name(object):
-
-    def __init__(self, name):
+    def __init__(self, name=None):
         self.name = name
 
     @property
@@ -24,10 +23,17 @@ class Name(object):
         return '{} {}'.format(self.name, self.lastname)
 
 
-a = Name('Paul')
-print(a.name)
-print(a.firstname)
-a.firstname = 'LeBron'
-a.lastname = 'James'
-print(a.firstname)
-print(a.fullname)
+if __name__ == '__main__':
+    a = Name('Paul')
+    print(a.name)
+    print(a.firstname)
+    a.firstname = 'LeBron'
+    a.lastname = 'James'
+    print(a.firstname)
+    print(a.fullname)
+    a.bar = 'Curry'
+    print(a.fullname)
+    b = Name()
+    b.firstname = 'Kevin'
+    b.bar = 'Durant'
+    print(b.fullname)
