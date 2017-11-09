@@ -10,13 +10,13 @@ async def page():
     async with aiohttp.ClientSession() as session:
         await session.post(url=url, data=json.dumps(payload), headers=headers)
 
-async def page2():
+async def page2(url):
     async with aiohttp.ClientSession(cookies=cookies) as session:
-        async with session.get(url2) as response:
+        async with session.get(url) as response:
             print(await response.json())
 
 if __name__ == '__main__':
-    tasks = [page2()]
+    tasks = [page2(url=url2)]
     loop = asyncio.get_event_loop()
     results = loop.run_until_complete(asyncio.gather(*tasks))
     loop.close()
