@@ -2,11 +2,8 @@ import aiohttp, asyncio
 
 
 async def page(url):
-    response = await aiohttp.request(method='GET', url=url)
-    print(url, response)
-    response.close()
-    # with await aiohttp.request(method='GET', url=url) as response:
-    #     print(url, response)
+    async with aiohttp.request(method='GET', url=url) as response:
+        print(await response.text())
 
 
 async def page2(url):
