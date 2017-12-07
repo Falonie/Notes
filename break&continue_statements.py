@@ -26,7 +26,7 @@ def statement():
 
 
 if __name__ == '__main__':
-    # break_statement()
+    break_statement()
     # print('\n')
     # continue_statement()
-    statement()
+    # statement()
