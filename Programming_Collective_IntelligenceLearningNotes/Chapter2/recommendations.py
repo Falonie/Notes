@@ -65,12 +65,21 @@ def sim_pearson(prefs, p1, p2):
 
     num = pSum - (sum1 * sum2 / len(si))
     den = sqrt((sum1Sq - pow(sum1, 2) / len(si)) * (sum2Sq - pow(sum2, 2) / len(si)))
-    return num/den
+    return num / den
+
+
+def topMatches(prefs, person, n=5, similarity=sim_pearson):
+    scores = [(similarity(prefs, person, other), other) for other in prefs if other != person]
+    scores.sort()
+    scores.reverse()
+    return scores[0:n]
+
 
 if __name__ == '__main__':
     print(sim_distance(critics, 'Lisa Rose', 'Gene Seymour'))
     print(sim_distance_(critics, 'Lisa Rose', 'Gene Seymour'))
     print(sim_pearson(critics, 'Lisa Rose', 'Gene Seymour'))
+    print(topMatches(critics,'Toby',n=3))
     # for item in critics['Lisa Rose']:
     #     print(item)
     # print([i for i in critics['Lisa Rose']])
