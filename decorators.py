@@ -19,8 +19,8 @@ def time_elapse(func):
         print(result)
         # return result
         # print('time elapse {}'.format(time.time()-t0))
-        return 'time elapse {}'.format(time.time() - t0)
-        # return func(*args, **kwargs)
+        # return 'time elapse {}'.format(time.time() - t0)
+        return func(*args, **kwargs)
     return wrapper
 
 
