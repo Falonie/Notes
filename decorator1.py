@@ -102,9 +102,7 @@ def log(text):
             result = func(*args, **kwargs)
             print('{0} end call {1}()'.format(text, func.__name__))
             return result
-
         return wrapper
-
     return decorator
 
 

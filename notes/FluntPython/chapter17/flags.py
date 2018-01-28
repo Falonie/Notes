@@ -1,15 +1,3 @@
-"""Download flags of top 20 countries by population
-
-Sequential version
-
-Sample run::
-
-    $ python3 flags.py
-    BD BR CD CN DE EG ET FR ID IN IR JP MX NG PH PK RU TR US VN
-    20 flags downloaded in 10.16s
-
-"""
-# BEGIN FLAGS_PY
 import os
 import time
 import sys
@@ -21,7 +9,7 @@ POP20_CC = ('CN IN US ID BR PK NG BD RU JP '
 
 BASE_URL = 'http://flupy.org/data/flags'  # <3>
 
-DEST_DIR = 'downloads/'  # <4>
+DEST_DIR = 'D:\downloads\\'  # <4>
 
 
 def save_flag(img, filename):  # <5>
