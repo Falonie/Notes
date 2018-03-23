@@ -20,7 +20,8 @@ class Name(object):
 
     @property
     def fullname(self):
-        return '{} {}'.format(self.name, self.lastname)
+        # return '{} {}'.format(self.name, self.lastname)
+        return '{} {}'.format(self.firstname, self.bar)
 
 
 if __name__ == '__main__':

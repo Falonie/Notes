@@ -15,9 +15,14 @@ def fuc3(name, age, nationality='Chinese', *args, **kwargs):
     print('name:', name, 'age:', age, 'nationality:', nationality, args, kwargs)
 
 
+def fun4(**kwargs):
+    return kwargs.get('gender')
+
+
 if __name__ == '__main__':
     fuc(name='Caseny', gender='male')
     fuc1(2, 3, 4, gender='female')
-    fuc2('Caseny', 'male', city='zhoushan')
-    fuc3('Caseny', 26)
-    fuc3('Caseny', 26, 'Japanese', 123, 'ABC', ds='ew')
+    fuc2('falonie', 'male', city='zhoushan')
+    fuc3('falonie', 26)
+    fuc3('falonie', 26, 'Japanese', 123, 'ABC', ds='ew')
+    print(fun4(gender='male'))

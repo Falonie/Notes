@@ -19,9 +19,20 @@ class Date(object):
         day, month, year = map(int, data_as_string.split('-'))
         return day <= 31 and month <= 12 and year <= 3999
 
+    def __repr__(self):
+        return 'day {} month {} year {}'.format(self.day, self.month, self.year)
+
+    def __str__(self):
+        return 'day {} month {} year {}'.format(self.day, self.month, self.year)
+
+    def output(self):
+        return self.day, self.month, self.year
+
 
 if __name__ == '__main__':
     date2 = Date.from_string('11-09-2012')
+    print(date2)
+    # print(date2.output())
     is_date = Date.is_date_valid('11-09-2012')
     print(is_date)
     date = Date()

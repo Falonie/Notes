@@ -1,0 +1,13 @@
+mongodump --archive=maigoo_家居建材五金.gz --gzip --db Falonie --collection maigoo_家居建材五金
+
+mongorestore --gzip --archive=maigoo_电器数码办公.gz --db Falonie
+
+mongoexport --db Falonie --collection zdao_股东_filter_duplicates --type=csv --fields url --out /home/salesmind/mind-ai-data/python/trunk/FalonieRepository/zaodao/zdao_创始人_filter_duplicates.csv
+
+mongoexport --db Falonie --collection zdao_股东_filter_duplicates --type=csv --fields url --out D:\PycharmProjects\mind-ai-data\python\trunk\FalonieRepository\zaodao\zdao_股东_filter_duplicates.csv
+
+mongoexport --db Falonie --collection 'maigoo_车 / 建工 / 农具' --type=csv --fields 企业地址,执照有效期,经营范围,核准日期,公司类型,统一社会信用代码,邮箱,网站备案机构,联系电话,认缴注册资本,企业成立日期,网站备案号,企业传真,发证机关,href,brief,发证机关,'公司高管/名人',company,公众微信号,网站备案号,企业官方网站,实收资本,执照有效期,企业官网,电话,品牌发源地,董事长,总经理 --out /home/salesmind/python-date/FalonieRepository2/maigou/maigou/'车/建工/农具'.csv
+
+mongoexport --db Falonie --collection maigoo_电器数码办公 --type=csv --fields 企业地址,执照有效期,经营范围,核准日期,公司类型,统一社会信用代码,邮箱,网站备案机构,联系电话,认缴注册资本,企业成立日期,网站备案号,企业传真,发证机关,href,brief,发证机关,'公司高管/名人',company,公众微信号,网站备案号,企业官方网站,实收资本,执照有效期,企业官网,电话,品牌发源地,董事长,总经理 --out E:\PycharmProjects\python-date\FalonieRepository2\maigou\maigou\电器数码办公.csv
+
+mongoexport --db Falonie --collection zdao_总裁_filter_duplicates_crawled_result --type=csv --fields user_name,user_title,user_company,business,small_title,establish_time,education,faucty,education,mobile,email,qq,weixin,industry,location,url --out /home/salesmind/mind-ai-data/python/trunk/FalonieRepository/zaodao/zdao_总裁_filter_duplicates_crawled_result.csv
