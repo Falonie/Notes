@@ -23,6 +23,8 @@ def decrator(func):
         result = func(*args, **kwargs)
         return '{}:{}'.format(wrapper.__name__, result)
     return wrapper
+
+
 @decrator
 def func(x, y):
     return x * y

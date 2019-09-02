@@ -17,6 +17,7 @@ class Celsius:
         print("Setting value")
         self._temperature = value
 
-c=Celsius()
-c.temperature=200
+
+c = Celsius()
+c.temperature = 200
 print(c.temperature)

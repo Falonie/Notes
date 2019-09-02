@@ -6,7 +6,8 @@ class AbstractShape(object):
 
 class Circle(AbstractShape):
     def __init__(self, color=None, r=.0):
-        super().__init__(color)
+        # super().__init__(color)
+        super(Circle, self).__init__(color)
         self.r = r
 
     def __repr__(self):

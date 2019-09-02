@@ -4,7 +4,7 @@ import logging
 def main():
     logger_name = 'example'
     logger = logging.getLogger(logger_name)
-    logger.setLevel(logging.DEBUG)
+    # logger.setLevel(logging.DEBUG)
 
     log_path = './log.log'
     fh = logging.FileHandler(log_path)
@@ -19,7 +19,7 @@ def main():
 
     logger.debug('debug message')
     logger.info('info message')
-    logger.warn('warn message')
+    logger.warning('warn message')
     logger.error('error message')
     logger.critical('critical message')
 

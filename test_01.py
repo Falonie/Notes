@@ -15,4 +15,4 @@ def func(name, *args, **kwargs):
     print(kwargs)
 
 
-func('caren', 4, 3, 'u', age='27')
+# func('caren', 4, 3, 'u', age='27')

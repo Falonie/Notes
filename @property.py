@@ -27,7 +27,6 @@ s.fuc = 1980
 s.fuc2 = 1080
 print(s.resolution)
 
-
 class Screen2(object):
     def f(self, width):
         self.width = width
